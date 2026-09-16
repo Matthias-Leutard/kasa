@@ -1,6 +1,8 @@
 import logements from './data/logements.json'
 import Header from './components/Header'
+import Footer from './components/Footer'
 import Banner from './components/Banner'
+import CardList from './components/CardList'
 import { Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -10,8 +12,10 @@ function App() {
       <Banner />
 
       <Routes>
-        <Route path="/" element={<h2>{logements[0].title}</h2>} />
+        <Route path="/" element={<CardList />} />
       </Routes>
+
+      <Footer />
     </>
   )
 }

@@ -1,0 +1,28 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 60px;
+  row-gap: 50px;
+  padding: 50px;
+  margin-bottom: 50px;
+  background-color: $background-color;
+  border-radius: 25px;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px;
+    margin-bottom: 22px;
+    gap: 30px;
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    padding: 0;
+    gap: 20px;
+    background-color: transparent;
+    border-radius: 0;
+  }
+}

@@ -1,0 +1,37 @@
+@use '../styles/mixins' as *;
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+
+  background-color: #000000;
+  color: #FFFFFF;
+
+  padding: 60px 0 30px;
+
+  svg {
+    width: 122px;
+    height: auto;
+  }
+
+  p {
+    font-size: 24px;
+    margin: 30px 0 0;
+  }
+
+  @include tablet {
+    p {
+      font-size: 18px;
+    }
+  }
+
+  @include mobile {
+    p {
+      font-size: 12px;
+    }
+  }
+}

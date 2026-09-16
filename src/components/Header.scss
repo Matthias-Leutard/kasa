@@ -1,0 +1,57 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  margin-bottom: 50px;
+
+  .logo svg {
+    width: 210px;
+    height: auto;
+  }
+
+  .logo {
+    color: $primary-color;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  nav {
+    display: flex;
+    gap: 40px;
+    font-size: 24px;
+    font-weight: 500;
+
+    a.active {
+      text-decoration: underline;
+    }
+  }
+
+  @include tablet {
+    .logo svg {
+      width: 180px;
+    }
+
+    nav {
+      font-size: 16px;
+      gap: 30px;
+    }
+  }
+
+  @include mobile {
+    .logo svg {
+      width: 145px;
+    }
+
+    nav {
+      font-size: 12px;
+      gap: 20px;
+    }
+  }
+}
