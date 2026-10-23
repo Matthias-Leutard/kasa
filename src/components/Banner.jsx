@@ -1,9 +1,9 @@
 import './Banner.scss'
 
-function Banner() {
+function Banner({ title = 'Chez vous, partout et ailleurs', variant = 'home' }) {
   return (
-    <section className="banner">
-      <h1>Chez vous, partout et ailleurs</h1>
+    <section className={`banner banner--${variant}`}>
+      {title && <h1>{title}</h1>}
     </section>
   )
 }

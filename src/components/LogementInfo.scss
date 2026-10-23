@@ -1,0 +1,136 @@
+
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.logement-info {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  h1 {
+    margin: 0;
+    color: $primary-color;
+    font-size: 36px;
+    font-weight: 500;
+  }
+
+  p {
+    margin: 10px 0 0;
+    font-size: 18px;
+  }
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+
+  span {
+    background-color: $primary-color;
+    color: $white;
+    border-radius: 16px;
+    padding: 5px 30px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+
+.host {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-content: flex-start;
+  margin-bottom: 21px;
+
+  .host-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    p {
+      margin: 0;
+      color: $primary-color;
+      text-align: right;
+      font-size: 18px;
+    }
+  }
+
+  img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .rating {
+    flex-basis: 100%;
+    justify-content: flex-end;
+  }
+}
+
+@include mobile {
+  .logement-info {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 15px;
+
+    h1 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .tags {
+    gap: 8px;
+    margin-top: 10px;
+
+    span {
+      padding: 4px 15px;
+      border-radius: 10px;
+      font-size: 10px;
+    }
+  }
+
+  .host {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0;
+
+    .host-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      order: 2;
+      margin-left: auto;
+      padding-right: 42px;
+
+      p {
+        font-size: 12px;
+      }
+    }
+
+    img {
+      width: 32px;
+      height: 32px;
+      order: 3;
+      margin-left: -42px;
+    }
+
+    .rating {
+      flex-basis: auto;
+      justify-content: flex-start;
+      order: 1;
+      margin-right: auto;
+    }
+  }
+}

@@ -38,9 +38,15 @@
     }
   }
 
-  @include tablet {
+  @include mobile {
     h1 {
       padding: 0 16px;
+    }
+  }
+
+  &--about {
+    &::before {
+      display: none;
     }
   }
 }
